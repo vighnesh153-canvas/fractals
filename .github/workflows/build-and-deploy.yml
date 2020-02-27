@@ -32,6 +32,9 @@ jobs:
     - name: Build for production
       run: ng build --prod --base-href /fractals/
 
+    - name: 404 redirect file
+      run: cp dist/fractals/index.html dist/fractals/404.html
+
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
