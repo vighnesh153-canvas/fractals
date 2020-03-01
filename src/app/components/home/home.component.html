@@ -1,0 +1,34 @@
+<div class="container">
+  <p class="intro">
+    The simplistic and precise definition of fractals is that
+    they are shapes that have fractional (non-integral) dimension.
+    Hence, the name. Check
+    <a [href]="definitionAndMeaning" target="_blank">this</a>
+    video by
+    <a [href]="channelOf3Blue1Brown" target="_blank">3Blue1Brown</a>
+    in which he discusses about these beautiful shapes or
+    whatever they are XD.
+  </p>
+
+  <p class="my-work">
+    I attempt to animate some fractals using the little knowledge
+    of coding I have. I hope you like what you see.
+  </p>
+
+  <blockquote class="quote">
+    "Math is fun, not when you understand it, but when you see how
+    beautiful it is."
+  </blockquote>
+
+  <div class="fractal-components">
+    <div
+      class="card" [routerLink]="component.link"
+      *ngFor="let component of fractalComponents"
+    >
+      <img [src]="component.image" [alt]="component.title"
+           class="card-image">
+      <div class="separator"></div>
+      <p class="card-title">{{ component.title }}</p>
+    </div>
+  </div>
+</div>
