@@ -7,7 +7,12 @@ export const environment = {
       {
         title: 'Barnsley\'s Fern',
         link: '/barnsleys-fern',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Visualisation_of_Barnsley_Fern_in_Processing.png'
+        image: 'assets/images/barnsleys-fern.png'
+      },
+      {
+        title: 'Sierpinski\'s triangle',
+        link: '/sierpinski-triangle',
+        image: 'assets/images/sierpinski-triangle.svg'
       }
     ]
   }

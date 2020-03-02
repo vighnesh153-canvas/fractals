@@ -7,6 +7,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomeComponent } from './components/home/home.component';
 import { BarnsleysFernComponent } from './fractal-components/barnsleys-fern/barnsleys-fern.component';
 import { FractalComponentTemplateComponent } from './components/fractal-component-template/fractal-component-template.component';
+import { SierpinksiTriangleComponent } from './fractal-components/sierpinksi-triangle/sierpinksi-triangle.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FractalComponentTemplateComponent } from './components/fractal-componen
     NavBarComponent,
     HomeComponent,
     BarnsleysFernComponent,
-    FractalComponentTemplateComponent
+    FractalComponentTemplateComponent,
+    SierpinksiTriangleComponent
   ],
   imports: [
     BrowserModule,
