@@ -1,19 +1,34 @@
-# Fractals
+<h1 align="center">
+  Fractals
+</h1>
+<p align="center">
+  Fractals are shapes that have fractional dimensions and they repeat themselves in each of their fragments. 
+  If you zoom in or zoom out on their fragments, you find the same shape. I attempt to animate some fractals 
+  and you can have a look at them by visiting <a href="https://vighnesh153-canvas.github.io/fractals/">here</a>.
+  I hope you like my work, leave a star if you do.
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+![Build and Deploy](https://github.com/vighnesh153-canvas/fractals/workflows/Build%20and%20Deploy/badge.svg)
 
-## Development server
+## 🛠 Installation & Set Up
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Install the NPM (6+)
 
-## Build
+2. Install angular-cli
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+   ```sh
+   npm i -g @angular/cli
+   ```
 
-## Running unit tests
+3. Clone the repo and CD in it
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+4. Install dependencies
+   
+      ```sh
+      npm i
+      ```
+5. Run the application:
+  
+    ```sh
+    ng serve 
+    ```
