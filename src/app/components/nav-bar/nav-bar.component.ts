@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { UtilityService } from '../../services/utility.service';
@@ -8,7 +8,7 @@ import { UtilityService } from '../../services/utility.service';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent implements OnInit, OnDestroy {
   displayBackButton: boolean;
 
   displayBackButtonSubscription: Subscription;
@@ -21,6 +21,10 @@ export class NavBarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  
+  ngOnDestroy(): void {
+    this.displayBackButtonSubscription.unsubscribe();
   }
 
 }
