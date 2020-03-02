@@ -1,7 +1,9 @@
+import { IProgram } from '../IProgram';
+
 import { Canvas } from '../Canvas';
 import { Fern } from './Fern';
 
-export class Program {
+export class Program implements IProgram {
   fern = new Fern();
   canvas: Canvas;
 
