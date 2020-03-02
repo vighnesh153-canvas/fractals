@@ -2,8 +2,13 @@
   <p class="title">{{ title }}</p>
   <div class="canvas">
     <canvas width="500" height="300" #canvas></canvas>
-    <button *ngIf="displayButton" (click)="animate()"
-            class="animate">Begin</button>
+    <button
+      *ngIf="displayButton"
+      (click)="toggleAnimation()"
+      class="animate"
+    >
+      {{ animationRunning ? 'Stop' : 'Begin' }}
+    </button>
   </div>
   <div class="no-canvas">
     <p>

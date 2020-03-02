@@ -1,11 +1,18 @@
-import { Canvas } from '../Canvas';
+import {Program} from './Program';
+
+let animateInterval;
 
 export const animate = (canvasElement: HTMLCanvasElement) => {
-  const canvas = new Canvas(canvasElement);
-  canvas.drawFilledRect(0, 0, canvas.width, canvas.height, 'black');
-  const offset = 3;
-  canvas.drawFilledRect(
-    canvas.width - offset, canvas.height - offset,
-    offset, offset, 'yellow'
-  );
+  const program = new Program(canvasElement);
+  animateInterval = setInterval(() => {
+    program.plot();
+    program.update();
+  }, 1);
+};
+
+export const stop = () => {
+  if (animateInterval) {
+    clearInterval(animateInterval);
+    animateInterval = null;
+  }
 };

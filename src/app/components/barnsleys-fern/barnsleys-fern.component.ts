@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { animate, stop } from '../../scripts/barnsleys-fern';
+
 @Component({
   selector: 'app-barnsleys-fern',
   templateUrl: './barnsleys-fern.component.html',
@@ -9,6 +11,8 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class BarnsleysFernComponent implements OnInit {
+  animateFunc = animate;
+  stopAnimationFunc = stop;
 
   constructor() { }
 

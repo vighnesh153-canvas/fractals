@@ -1,30 +1,39 @@
-import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-fractal-component-template',
   templateUrl: './fractal-component-template.component.html',
   styleUrls: ['./fractal-component-template.component.scss']
 })
-export class FractalComponentTemplateComponent implements OnInit {
+export class FractalComponentTemplateComponent implements OnInit, OnDestroy {
   displayButton = false;
-  animateFunction: (canvasElement: HTMLCanvasElement) => void;
+  animationRunning = false;
+
+  @Input() animateFunction: (canvasElement: HTMLCanvasElement) => void;
+  @Input() stopAnimationFunction: () => void;
 
   @Input() title = 'Title';
-  @ViewChild('canvas') canvasElement: ElementRef<HTMLCanvasElement>;
+  @ViewChild('canvas', { static: true })  // static: true, to use in ngOnInit
+  canvasElement: ElementRef<HTMLCanvasElement>;
 
-  constructor() {
-    import('src/app/scripts/barnsleys-fern/index')
-      .then(({ animate }) => {
-        this.displayButton = true;
-        this.animateFunction = animate;
-      });
-  }
+  constructor() {}
 
   ngOnInit(): void {
+    this.displayButton = true;
   }
 
-  animate() {
-    this.animateFunction(this.canvasElement.nativeElement);
+  toggleAnimation() {
+    if (this.animationRunning === false) {
+      this.animateFunction(this.canvasElement.nativeElement);
+    } else {
+      this.stopAnimationFunction();
+    }
+
+    this.animationRunning = !this.animationRunning;
+  }
+
+  ngOnDestroy(): void {
+    this.stopAnimationFunction();
   }
 
 }

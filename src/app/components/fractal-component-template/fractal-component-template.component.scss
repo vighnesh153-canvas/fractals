@@ -33,9 +33,11 @@
 
     font-size: 1rem;
     cursor: pointer;
-    outline-color: darken($backgroundColor, 30);
+    color: aliceblue;
+    background-color: $navTextColor;
+    outline-color: $navTextColor;
 
-    &:hover, &:focus {
+    &:hover {
       color: $navTextColor;
       background-color: aliceblue;
     }
