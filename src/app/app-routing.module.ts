@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
-import { BarnsleysFernComponent } from './components/barnsleys-fern/barnsleys-fern.component';
+import { BarnsleysFernComponent } from './fractal-components/barnsleys-fern/barnsleys-fern.component';
 
 
 const routes: Routes = [
