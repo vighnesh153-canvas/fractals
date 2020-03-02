@@ -1,1 +1,32 @@
-<p>barnsleys-fern works!</p>
+<app-fractal-component-template
+  title="Barnsley's Fern"
+>
+  <div class="content">
+    <p>
+      Barnsley's Fern is a fractal that is generated using 4 functions. Cumulative
+      probability is used to determine which function should transform the old
+      coordinates to new ones. The initial values of <em>x</em> and <em>y</em> are 0.
+      The transformation functions are as follows:
+    </p>
+    <p class="function">
+      f<sub>1</sub> is chosen 1% of the time: <br>
+      x<sub>n + 1</sub> = 0 <br>
+      y<sub>n + 1</sub> = 0.16y<sub>n</sub>
+    </p>
+    <p class="function">
+      f<sub>2</sub> is chosen 85% of the time: <br>
+      x<sub>n + 1</sub> = 0.85x<sub>n</sub>  + 0.04y<sub>n</sub> <br>
+      y<sub>n + 1</sub> = -0.04x<sub>n</sub> + 0.85y<sub>n</sub> + 1.6
+    </p>
+    <p class="function">
+      f<sub>3</sub> is chosen 7% of the time: <br>
+      x<sub>n + 1</sub> = 0.2x<sub>n</sub>  - 0.26y<sub>n</sub> <br>
+      y<sub>n + 1</sub> = 0.23x<sub>n</sub> + 0.22y<sub>n</sub> + 1.6
+    </p>
+    <p class="function">
+      f<sub>4</sub> is chosen 7% of the time: <br>
+      x<sub>n + 1</sub> = -0.15x<sub>n</sub>  + 0.28y<sub>n</sub> <br>
+      y<sub>n + 1</sub> = 0.26x<sub>n</sub> + 0.24y<sub>n</sub> + 0.44
+    </p>
+  </div>
+</app-fractal-component-template>
