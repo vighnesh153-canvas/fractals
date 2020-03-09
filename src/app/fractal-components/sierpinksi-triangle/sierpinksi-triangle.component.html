@@ -1,14 +1,18 @@
 <app-fractal-component-template
   title="Sierpinski's triangle"
-  [animateFunction]="animateFunc"
-  [stopAnimationFunction]="stopAnimationFunc"
+  [animateFunction]="animationStart"
+  [stopAnimationFunction]="animationStop"
+  (element)="receiveElement($event)"
 >
   <div class="content">
     <p>
       Sierpinski's triangle is quite a popular fractal.
       It can be implemented by a simple recursion algorithm.
       But, here I share with you a
-      <a href="https://en.wikipedia.org/wiki/Chaos_game">Chaos Game</a>
+      <a href="https://en.wikipedia.org/wiki/Chaos_game"
+         target="_blank" rel="noopener">
+        Chaos Game
+      </a>
       approach.
     </p>
     <p>

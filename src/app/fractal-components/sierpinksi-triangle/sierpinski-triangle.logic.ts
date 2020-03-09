@@ -1,12 +1,11 @@
-import { Canvas } from '../Canvas';
-import { IProgram } from '../IProgram';
+import { Canvas } from '../../scripts/Canvas';
 
 interface Point {
   x: number;
   y: number;
 }
 
-export class Program implements IProgram {
+export class SierpinskiTriangleLogic {
   canvas: Canvas;
   a: Point = { x: 250, y: 50 };
   b: Point = { x: 100, y: 250 };

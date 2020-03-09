@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit
+} from '@angular/core';
 
-import { animate, stop } from '../../scripts/barnsleys-fern';
+import { BarnsleysFernLogic } from './barnsleys-fern.logic';
 
 @Component({
   selector: 'app-barnsleys-fern',
@@ -11,12 +15,31 @@ import { animate, stop } from '../../scripts/barnsleys-fern';
   ]
 })
 export class BarnsleysFernComponent implements OnInit {
-  animateFunc = animate;
-  stopAnimationFunc = stop;
+  canvasElement: ElementRef<HTMLCanvasElement>;
+  animateInterval;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  receiveElement(e: ElementRef<HTMLCanvasElement>) {
+    this.canvasElement = e;
+  }
+
+  animationStart() {
+    const program = new BarnsleysFernLogic(this.canvasElement.nativeElement);
+    this.animateInterval = setInterval(() => {
+      program.plot();
+      program.update();
+    }, 1);
+  }
+
+  animationStop() {
+    if (this.animateInterval) {
+      clearInterval(this.animateInterval);
+      this.animateInterval = null;
+    }
   }
 
 }
