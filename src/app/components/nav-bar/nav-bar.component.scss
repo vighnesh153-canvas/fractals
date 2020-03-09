@@ -4,7 +4,7 @@ nav {
   height: 10vh;
   position: relative;
 
-  background-color: $backgroundColor;
+  background-color: $color1;
 }
 
 .content {
@@ -15,7 +15,7 @@ nav {
   align-items: center;
 
   font-size: 1.8rem;
-  color: $navTextColor;
+  color: $color2;
 }
 
 .btn-back {
@@ -29,10 +29,10 @@ nav {
 
   transform: translateY(-50%);
   cursor: pointer;
-  outline-color: darken($backgroundColor, 30);
+  outline-color: darken($color1, 30);
 
   &:hover, &:focus {
-    color: $navTextColor;
+    color: $color2;
     background-color: aliceblue;
   }
 }

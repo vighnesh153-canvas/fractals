@@ -8,6 +8,9 @@ import { HomeComponent } from './components/home/home.component';
 import { BarnsleysFernComponent } from './fractal-components/barnsleys-fern/barnsleys-fern.component';
 import { FractalComponentTemplateComponent } from './components/fractal-component-template/fractal-component-template.component';
 import { SierpinksiTriangleComponent } from './fractal-components/sierpinksi-triangle/sierpinksi-triangle.component';
+import { HilbertCurveComponent } from './fractal-components/hilbert-curve/hilbert-curve.component';
+import { IntegerInputComponent } from './shared/integer-input/integer-input.component';
+import { DataComponent } from './shared/data/data.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { SierpinksiTriangleComponent } from './fractal-components/sierpinksi-tri
     HomeComponent,
     BarnsleysFernComponent,
     FractalComponentTemplateComponent,
-    SierpinksiTriangleComponent
+    SierpinksiTriangleComponent,
+    HilbertCurveComponent,
+    IntegerInputComponent,
+    DataComponent
   ],
   imports: [
     BrowserModule,

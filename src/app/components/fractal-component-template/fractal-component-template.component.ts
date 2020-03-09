@@ -27,11 +27,13 @@ export class FractalComponentTemplateComponent implements OnInit, OnDestroy, Aft
   canvasElement: ElementRef<HTMLCanvasElement>;
 
   @Output() element = new EventEmitter<ElementRef<HTMLCanvasElement>>();
+  @Output() isShown = new EventEmitter<boolean>();
 
   constructor() {}
 
   ngOnInit(): void {
     this.displayButton = true;
+    this.isShown.emit(window.innerWidth > 625);
   }
 
   ngAfterViewInit(): void {

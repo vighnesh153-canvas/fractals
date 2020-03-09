@@ -5,6 +5,11 @@ export const environment = {
     channelOf3Blue1Brown: 'https://www.3blue1brown.com/',
     components: [
       {
+        title: 'Pseudo Hilbert Curve',
+        link: '/hilberts-curve',
+        image: 'assets/images/hilbert-curve.png'
+      },
+      {
         title: 'Barnsley\'s Fern',
         link: '/barnsleys-fern',
         image: 'assets/images/barnsleys-fern.png'

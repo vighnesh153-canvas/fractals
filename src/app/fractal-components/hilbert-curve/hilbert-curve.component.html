@@ -1,0 +1,29 @@
+<app-fractal-component-template
+  title="Pseudo Hilbert Curves"
+  [animateFunction]="animationStart.bind(this)"
+  [stopAnimationFunction]="animationStop.bind(this)"
+  (element)="receiveElement($event)"
+  (isShown)="isCanvasDisplayed($event)"
+>
+  <div class="content">
+    <div class="data" *ngIf="displayDataSection">
+      <app-data>
+        <app-integer-input
+          title="Order of curve"
+          note="Maximum is 6"
+          (value)="changeInValue($event)"
+        ></app-integer-input>
+      </app-data>
+    </div>
+
+    <p>
+      Hilbert curve is a continuous fractal space-filling curve. Space-filling
+      curves are a type of infinite mathematics. 3Blue1Brown discusses very
+      well about infinite math in
+      <a href="https://www.youtube.com/watch?v=3s7h2MHQtxc"
+         rel="nofollow" target="_blank"
+      >this</a>
+      video. Check it out.
+    </p>
+  </div>
+</app-fractal-component-template>
