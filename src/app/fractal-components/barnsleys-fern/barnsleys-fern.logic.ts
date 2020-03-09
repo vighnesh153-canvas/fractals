@@ -1,9 +1,7 @@
-import { IProgram } from '../IProgram';
-
-import { Canvas } from '../Canvas';
+import { Canvas } from '../../scripts/Canvas';
 import { Fern } from './Fern';
 
-export class Program implements IProgram {
+export class BarnsleysFernLogic {
   fern = new Fern();
   canvas: Canvas;
 

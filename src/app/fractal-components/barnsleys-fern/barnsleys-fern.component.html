@@ -1,7 +1,8 @@
 <app-fractal-component-template
   title="Barnsley's Fern"
-  [animateFunction]="animateFunc"
-  [stopAnimationFunction]="stopAnimationFunc"
+  [animateFunction]="animationStart"
+  [stopAnimationFunction]="animationStop"
+  (element)="receiveElement($event)"
 >
   <div class="content">
     <p>

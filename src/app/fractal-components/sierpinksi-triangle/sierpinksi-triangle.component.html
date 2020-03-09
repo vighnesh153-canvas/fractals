@@ -1,7 +1,8 @@
 <app-fractal-component-template
   title="Sierpinski's triangle"
-  [animateFunction]="animateFunc"
-  [stopAnimationFunction]="stopAnimationFunc"
+  [animateFunction]="animationStart"
+  [stopAnimationFunction]="animationStop"
+  (element)="receiveElement($event)"
 >
   <div class="content">
     <p>

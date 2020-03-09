@@ -1,11 +1,21 @@
-import {Component, ElementRef, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnDestroy,
+  OnInit,
+  Output,
+  ViewChild
+} from '@angular/core';
 
 @Component({
   selector: 'app-fractal-component-template',
   templateUrl: './fractal-component-template.component.html',
   styleUrls: ['./fractal-component-template.component.scss']
 })
-export class FractalComponentTemplateComponent implements OnInit, OnDestroy {
+export class FractalComponentTemplateComponent implements OnInit, OnDestroy, AfterViewInit {
   displayButton = false;
   animationRunning = false;
 
@@ -16,10 +26,16 @@ export class FractalComponentTemplateComponent implements OnInit, OnDestroy {
   @ViewChild('canvas', { static: true })  // static: true, to use in ngOnInit
   canvasElement: ElementRef<HTMLCanvasElement>;
 
+  @Output() element = new EventEmitter<ElementRef<HTMLCanvasElement>>();
+
   constructor() {}
 
   ngOnInit(): void {
     this.displayButton = true;
+  }
+
+  ngAfterViewInit(): void {
+    this.element.emit(this.canvasElement);
   }
 
   toggleAnimation() {
