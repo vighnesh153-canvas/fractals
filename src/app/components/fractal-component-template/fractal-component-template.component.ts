@@ -19,6 +19,7 @@ export class FractalComponentTemplateComponent implements OnInit, OnDestroy, Aft
   displayButton = false;
   animationRunning = false;
 
+  @Input() parentAllowsDisplayButton = true;
   @Input() animateFunction: (canvasElement: HTMLCanvasElement) => void;
   @Input() stopAnimationFunction: () => void;
 

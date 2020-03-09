@@ -3,7 +3,7 @@
   <div class="canvas">
     <canvas width="500" height="300" #canvas></canvas>
     <button
-      *ngIf="displayButton"
+      *ngIf="displayButton && parentAllowsDisplayButton"
       (click)="toggleAnimation()"
       class="animate"
     >

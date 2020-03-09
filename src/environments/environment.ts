@@ -14,6 +14,11 @@ export const environment = {
         image: 'assets/images/hilbert-curve.png'
       },
       {
+        title: 'Symmetric Binary Tree',
+        link: '/symmetric-binary-tree',
+        image: 'assets/images/symmetric-binary-tree.png'
+      },
+      {
         title: 'Barnsley\'s Fern',
         link: '/barnsleys-fern',
         image: 'assets/images/barnsleys-fern.png'

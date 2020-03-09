@@ -21,6 +21,7 @@ export class Canvas {
 
     this.canvas = canvas;
     this.canvasContext = this.canvas.getContext('2d');
+    this.canvasContext.setTransform(1, 0, 0, 1, 0, 0);
   }
 
   drawBitmap(useBitmap, x: number, y: number, angle: number) {
@@ -81,6 +82,22 @@ export class Canvas {
   writeText(text: string, x: number, y: number, fontSize: number, color: string) {
     this.canvasContext.fillStyle = color;
     this.canvasContext.fillText(text, x, y);
+  }
+
+  translate(x: number, y: number) {
+    this.canvasContext.translate(x, y);
+  }
+
+  rotate(angle: number) {
+    this.canvasContext.rotate(angle);
+  }
+
+  pushState() {
+    this.canvasContext.save();
+  }
+
+  popState() {
+    this.canvasContext.restore();
   }
 }
 

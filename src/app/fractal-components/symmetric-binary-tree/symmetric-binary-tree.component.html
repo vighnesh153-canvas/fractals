@@ -1,0 +1,34 @@
+<app-fractal-component-template
+  title="Symmetric Binary Tree"
+  [parentAllowsDisplayButton]="false"
+  [animateFunction]="animationStart.bind(this)"
+  [stopAnimationFunction]="animationStop.bind(this)"
+  (element)="receiveElement($event)"
+  (isShown)="isCanvasDisplayed($event)"
+>
+  <div class="content">
+    <div class="data" *ngIf="displayDataSection">
+      <app-data>
+        <app-range-input
+          title="Angle"
+          note="" [value]="0.37"
+          (valueEmitter)="onAngleChange($event)"
+        ></app-range-input>
+        <app-integer-input
+          title="Initial branch length"
+          note=""
+          [min]="50" [max]="100" [step]="1" [currentValue]="60"
+          (value)="onInitialBranchLengthChange($event)"
+        >
+        </app-integer-input>
+        <app-range-input
+          title="Branch length scale down factor"
+          note="" [min]="0" [max]="0.9" [step]="0.01" [value]="0.7"
+          (valueEmitter)="onBranchLengthScaleDownFactorChange($event)"
+        ></app-range-input>
+      </app-data>
+    </div>
+
+    <p></p>
+  </div>
+</app-fractal-component-template>
